@@ -48,6 +48,7 @@ public class HeadCollisionDetector : MonoBehaviour
         if (_currentTime > _detectionDelay)
         {
             _currentTime = 0;
+            InsideCollider = false;
             DetectedColliderHits = PreformDetection(transform.position,
                 _detectionDistance, _detectionLayers);
             if (DetectedColliderHits.Count <= 0)
